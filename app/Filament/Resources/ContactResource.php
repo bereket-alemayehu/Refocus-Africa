@@ -37,7 +37,7 @@ class ContactResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                Select::make('education_level')
+                Select::make('education')
                     ->label('Education Level')
                     ->required()
                     ->options([
@@ -57,7 +57,7 @@ class ContactResource extends Resource
                     ->email()
                     ->required(),
 
-                TextInput::make('phone_number')
+                TextInput::make('phone')
                     ->label('Phone Number')
                     ->required()
                     ->maxLength(20),
@@ -74,10 +74,10 @@ class ContactResource extends Resource
             ->columns([
                 TextColumn::make('name')->label('Full Name')->sortable()->searchable(),
                 TextColumn::make('proffession')->label('Proffession')->sortable()->searchable(),
-                TextColumn::make('education_level')->label('Education Level')->sortable(),
+                TextColumn::make('education')->label('Education Level')->sortable(),
                 TextColumn::make('address')->label('Address')->limit(30),
                 TextColumn::make('email')->label('Email')->sortable()->searchable(),
-                TextColumn::make('phone_number')->label('Phone Number')->sortable()->searchable(),
+                TextColumn::make('phone')->label('Phone Number')->sortable()->searchable(),
 
             ])
             ->filters([
