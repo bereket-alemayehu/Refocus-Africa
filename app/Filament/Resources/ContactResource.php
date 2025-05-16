@@ -32,8 +32,8 @@ class ContactResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                TextInput::make('profession')
-                    ->label('Profession')
+                TextInput::make('proffession')
+                    ->label('Proffession')
                     ->required()
                     ->maxLength(255),
 
@@ -73,7 +73,7 @@ class ContactResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->label('Full Name')->sortable()->searchable(),
-                TextColumn::make('profession')->label('Profession')->sortable()->searchable(),
+                TextColumn::make('proffession')->label('Proffession')->sortable()->searchable(),
                 TextColumn::make('education_level')->label('Education Level')->sortable(),
                 TextColumn::make('address')->label('Address')->limit(30),
                 TextColumn::make('email')->label('Email')->sortable()->searchable(),
