@@ -91,10 +91,12 @@ class ContactResource extends Resource
                     ->sortable()
                     ->searchable()
                     ->isToggledHiddenByDefault(),
+
                 TextColumn::make('phone')
                     ->label('Phone Number')
                     ->sortable()
-                    ->searchable(),
+                    ->searchable()
+                    ->isToggledHiddenByDefault(),
 
             ])
             ->filters([
