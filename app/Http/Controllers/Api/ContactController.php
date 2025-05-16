@@ -25,7 +25,7 @@ class ContactController extends Controller
             'proffession' => 'required|string|max:255',
             'address' => 'required|string|max:500',
             'phone' => 'required|string|max:20|unique:contacts,phone',
-            'suggestion' => 'required|string|max:1000',
+            'suggestion' => 'string|max:1000',
             'education' => 'required|string|max:255',
         ]);
 
