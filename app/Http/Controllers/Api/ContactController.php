@@ -11,10 +11,10 @@ class ContactController extends Controller
 {
 
 
-    public function index()
+     public function index()
     {
-        $contacts = Contact::all();
-        return ContactResource::collection($contacts);
+        $contacct = Contact::all();
+        return ContactResource::collection($contacct);
     }
     public function store(Request $request)
     {
