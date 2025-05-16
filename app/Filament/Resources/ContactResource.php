@@ -64,7 +64,7 @@ class ContactResource extends Resource
 
                 Textarea::make('suggestion')
                     ->label('Suggestion / Recommendation')
-                    ->required(),
+                    ->nullable(),
             ]);
     }
 

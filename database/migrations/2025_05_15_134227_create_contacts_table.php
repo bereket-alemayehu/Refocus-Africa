@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('proffession');
             $table->string('address');
             $table->string('phone');
-            $table->text('suggestion');
+            $table->text('suggestion')->nullable();
             $table->string('education');
             $table->timestamps();
         });
