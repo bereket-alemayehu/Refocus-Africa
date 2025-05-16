@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\ContactResource;
 
 class ContactController extends Controller
 {
@@ -13,7 +14,7 @@ class ContactController extends Controller
     public function index()
     {
         $contacts = Contact::all();
-        return response()->json(['data' => $contacts]);
+        return ContactResource::collection($contacts);
     }
     public function store(Request $request)
     {

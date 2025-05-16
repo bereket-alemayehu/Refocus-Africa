@@ -46,14 +46,7 @@ class ContactResource extends Resource
                         'masters' => 'Masters',
                         'phd' => 'PhD',
                     ]),
-                TextColumn::make('role')
-                    ->label('Role')
-                    ->formatStateUsing(fn(string $state) => match ($state) {
-                        'admin' => 'Administrator',
-                        'user' => 'User',
-                        'editor' => 'Editor',
-                        default => ucfirst($state),
-                    }),
+
                 TextInput::make('address')
                     ->label('Address')
                     ->required()
@@ -81,12 +74,7 @@ class ContactResource extends Resource
             ->columns([
                 TextColumn::make('name')->label('Full Name')->sortable()->searchable(),
                 TextColumn::make('profession')->label('Profession')->sortable()->searchable(),
-                TextColumn::make('education_level')->label('Education Level')->sortable()->enum([
-                    'highschool' => 'Highschool',
-                    'bachelors' => 'Bachelors',
-                    'masters' => 'Masters',
-                    'phd' => 'PhD',
-                ]),
+                TextColumn::make('education_level')->label('Education Level')->sortable(),
                 TextColumn::make('address')->label('Address')->limit(30),
                 TextColumn::make('email')->label('Email')->sortable()->searchable(),
                 TextColumn::make('phone_number')->label('Phone Number')->sortable()->searchable(),
